@@ -1,0 +1,11 @@
+start CloudWatch service
+cd "C:\Program Files\Amazon\AmazonCloudWatchAgent"
+.\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m ec2 -c file:"C:\Program Files\Amazon\AmazonCloudWatchAgent\CloudWatchWindowsConfig.json" -s
+
+stop CloudWatch service
+cd "C:\Program Files\Amazon\AmazonCloudWatchAgent"
+.\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a stop
+
+check CloudWatch service status
+cd "C:\Program Files\Amazon\AmazonCloudWatchAgent"
+.\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a status
